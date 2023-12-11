@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800&family=Montserrat&display=swap");
+
+:root {
+  --color-dark: #121212;
+  --color-grey: #e6e6e6;
+  --color-gr-white: #f8f8f8;
+  --color-sale: #e91e63;
+  --color-yellow: #f0cc84;
+  --color-error: #d61313;
+  --color-ok: #0bb17f;
+  --color-black-opacity-2: rgba(255, 255, 255, 0.2);
+  --color-black-opacity-4: rgba(255, 255, 255, 0.4);
+}
+
+* {
+  font-family: "Spartan", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fefefe;
+}
+
+hr {
+  height: 2px;
+}
+
+button:active {
+  scale: 0.98;
+}
+
+a:hover,
+svg:hover {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2525253a;
+}
+
+/* TEXT GLOBAL STYLES */
+
+.title-36-42 {
+  line-height: 2.625rem;
+  letter-spacing: 0.135rem;
+  @apply text-4xl font-semibold uppercase;
+}
+
+.title-26-36 {
+  font-size: 1.625rem;
+  letter-spacing: 0.0975rem;
+  @apply font-semibold leading-9 not-italic uppercase;
+}
+
+.title-22-30 {
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  letter-spacing: 0.0825rem;
+  @apply font-semibold uppercase;
+}
+
+.title-16-24 {
+  letter-spacing: 0.06rem;
+  @apply text-base font-semibold leading-6 uppercase;
+}
+
+.title-14-22 {
+  letter-spacing: 0.0525rem;
+  @apply text-sm font-semibold leading-snug uppercase;
+}
+
+.subtitle-12-18 {
+  line-height: 1.125rem;
+  letter-spacing: 0.045rem;
+  @apply text-xs font-semibold uppercase;
+}
+
+.body-14-22 {
+  line-height: 1.375rem;
+  @apply text-sm font-normal;
+}
+
+.body-bold {
+  line-height: 1.375rem;
+  @apply text-sm font-bold;
+}
+
+.small-11-18 {
+  font-size: 0.6875rem;
+  line-height: 1.125rem;
+  @apply font-medium;
+}
+
+.btn-text {
+  font-size: 0.8125rem;
+  line-height: normal;
+  letter-spacing: 0.04875rem;
+  @apply font-medium;
+}
+
+/* CONTAINER GLOBAL STYLES */
+
+.border-button {
+  border: 1px solid var(--color-dark);
+}
+
+.container-p {
+  padding-left: 6.71875%;
+  padding-right: 6.71875%;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.cont-y {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.main {
+  float: left;
+  width: calc(100% - 16rem);
+}
+
+@media (max-width: 320px) {
+  * {
+    font-size: 12px;
+  }
+
+  .container-p {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  * {
+    font-size: 14px;
+  }
+
+  .container-p {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+@media (max-width: 768px) {
+  * {
+    font-size: 15px;
+  }
+
+  .container-p {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+@media (max-width: 1024px) {
+  * {
+    font-size: 0.98rem;
+  }
+  .container-p {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+/* @media (min-width: 1280px) {
+  .container {
+      max-width: 1280px;
+  }
+} */
+/* @media (min-width: 1536px) {
+
+} */

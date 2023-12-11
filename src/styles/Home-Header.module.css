@@ -1,0 +1,84 @@
+.HHflex,
+.HHflexSecond > div:first-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.88rem;
+}
+
+.HHflexSecond {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.88rem;
+}
+
+.Hbanner {
+  position: relative;
+}
+
+.Hbanner > ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+}
+
+.slide > img {
+  display: block;
+}
+
+.slide.active {
+  opacity: 1;
+  position: static;
+}
+
+.HbannerDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.HbannerInner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+}
+
+.HbannerDiv div {
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+}
+
+.HbannerDiv button {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media (max-width: 400px) {
+  .HbannerDiv div {
+    padding: 0.1rem 0.3rem;
+  }
+}

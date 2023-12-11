@@ -1,0 +1,101 @@
+/* flex flex-col justify-between cursor-pointer  */
+.body {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 2rem;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.innerDiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  max-width: 16rem;
+  height: max-content;
+  width: auto;
+}
+
+@media (max-width: 1305px) {
+  .body {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1250px) {
+  .body {
+    gap: 0.5rem;
+  }
+  .innerDiv {
+    max-width: 14rem;
+  }
+}
+
+@media (max-width: 1070px) {
+  .body {
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+  }
+
+  .innerDiv {
+    max-width: 16rem;
+  }
+}
+
+@media (max-width: 910px) {
+  .body {
+    gap: 1rem;
+  }
+  .innerDiv {
+    max-width: 14rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .innerDiv {
+    max-width: 12rem;
+  }
+}
+
+@media (max-width: 670px) {
+  .body {
+    grid-template-columns: auto auto;
+    gap: 2rem;
+  }
+
+  .innerDiv {
+    max-width: 16rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .body {
+    gap: 1rem;
+  }
+
+  .innerDiv {
+    max-width: 14rem;
+  }
+}
+
+@media (max-width: 510px) {
+  .body {
+    gap: 0.5;
+  }
+  .innerDiv {
+    max-width: 12rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .innerDiv img {
+    width: 10rem;
+  }
+  .innerDiv {
+    max-width: 10rem;
+  }
+}

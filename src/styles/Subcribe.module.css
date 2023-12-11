@@ -1,0 +1,43 @@
+.containerSub {
+  height: 36.25rem;
+  background: linear-gradient(180deg, #f3f2f2 0%, #dcdbdb 100%);
+}
+
+.daco,
+.jack {
+  position: absolute;
+  z-index: 1;
+}
+
+.daco {
+  left: -260px;
+  bottom: -100px;
+}
+
+.jack {
+  right: -205px;
+  bottom: -50px;
+}
+
+@media (max-width: 1000px) {
+  .daco,
+  .jack {
+    width: 120px;
+  }
+
+  .daco {
+    left: -90px;
+    bottom: -75px;
+  }
+
+  .jack {
+    right: -100px;
+  }
+}
+
+@media (max-width: 724px) {
+  .daco,
+  .jack {
+    display: none;
+  }
+}
