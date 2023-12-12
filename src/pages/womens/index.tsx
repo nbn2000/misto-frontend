@@ -1,9 +1,10 @@
 import Body from "@/sections/womens/Body"
 import Header from "@/sections/womens/Header"
 const Womens = () => {
+
     return (
 
-        <div >
+        <div>
             <Header />
             <Body />
         </div>

@@ -6,7 +6,7 @@ import { SVG42, SVG43, SVG44, SVG45, SVG46 } from "@/svg/SVG"
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
-export const TopBody = () => {
+export const TopBody = ({ setGrid, grid }: { setGrid: any, grid: boolean }) => {
     const [active, setActive] = useState(false)
     const spec = useSelector((state: RootState) => state.specification.value)
     const dispatch = useDispatch()
@@ -32,11 +32,11 @@ export const TopBody = () => {
                     <small className={active ? "btn-text text-dark " : "btn-text text-dark opacity-60"}>FILTER</small>
                 </button>
                 <div className="flex flex-row justify-center items-center text-center gap-6">
-                    <button>
-                        <SVG44 />
+                    <button onClick={() => setGrid(false)}>
+                        <SVG44 stroke={!grid ? "#121212" : "#707070"} />
                     </button>
-                    <button>
-                        <SVG45 />
+                    <button onClick={() => setGrid(true)} >
+                        <SVG45 stroke={grid ? "#121212" : "#707070"} />
                     </button>
                 </div>
                 <details className="dropdown">
