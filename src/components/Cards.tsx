@@ -9,7 +9,7 @@ import { memo } from "react"
 import { useRouter } from "next/navigation";
 import styles from "@/styles/cards.module.css"
 
-const Cards = ({ categ, limit = ObjectData.length, grid = false }: { categ: string, limit?: number, grid: boolean }) => {
+const Cards = ({ categ, limit = ObjectData.length, grid = true }: { categ: string, limit?: number, grid?: boolean }) => {
     const router = useRouter()
     const specMen = useSelector((state: RootState) => state.specification.value.men)
     const specWomen = useSelector((state: RootState) => state.specification.value.women)

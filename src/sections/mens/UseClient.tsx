@@ -2,7 +2,7 @@
 
 import { change } from "@/store/specifations"
 import { RootState } from "@/store/store"
-import { SVG24, SVG25, SVG44, SVG45, SVG28 } from "@/svg/SVG"
+import { SVG24, SVG25, SVG44, SVG45, SVG46 } from "@/svg/SVG"
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
@@ -39,19 +39,17 @@ export const TopBody = ({ setGrid, grid }: { setGrid: any, grid: boolean }) => {
                         <SVG45 stroke={grid ? "#121212" : "#707070"} />
                     </button>
                 </div>
-                <details className="dropdown">
-                    <summary className="m-1 btn flex flex-row justify-center items-center gap-1 bg-transparent">
-                        <small className="btn-text text-dark opacity-60">{spec.men}</small>
-                        <SVG28 />
-                    </summary>
-                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                <div className="dropdown">
+                    <div tabIndex={0} role="button" className="btn m-1 flex flex-row justify-center items-center gap-1 bg-transparent"><small className="btn-text text-dark opacity-60">{spec.women}</small>
+                        <SVG46 /></div>
+                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li><button className="btn-text text-dark opacity-60" onClick={() => getValue("NEW ARRIVALS")}>NEW ARRIVALS</button></li>
                         <li><button className="btn-text text-dark opacity-60" onClick={() => getValue("SPECIALS")}>SPECIALS</button></li>
                         <li><button className="btn-text text-dark opacity-60" onClick={() => getValue("BESTSELLERS")}>BESTSELLERS</button></li>
                         <li><button className="btn-text text-dark opacity-60" onClick={() => getValue("MOST VIEWED")}>MOST VIEWED</button></li>
                         <li><button className="btn-text text-dark opacity-60" onClick={() => getValue("FEATURED PRODUCTS")}>FEATURED PRODUCTS</button></li>
                     </ul>
-                </details>
+                </div>
             </div>
             {active && (
                 <div className="w-full bg-gr-white py-6 px-10 cont-y flex flex-row justify-between items-center flex-wrap gap-4">
