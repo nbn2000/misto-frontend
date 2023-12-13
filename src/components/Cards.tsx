@@ -9,13 +9,13 @@ import { memo } from "react"
 import { useRouter } from "next/navigation";
 import styles from "@/styles/cards.module.css"
 
-const Cards = ({ categ, limit = ObjectData.length, grid = true }: { categ: string, limit?: number, grid?: boolean }) => {
+const Cards = ({ categ, limit = ObjectData.length, grid = true, startIndex = 0, spec = '' }: { categ: string, limit?: number, grid?: boolean, startIndex?: number, spec?: string }) => {
     const router = useRouter()
     const specMen = useSelector((state: RootState) => state.specification.value.men)
     const specWomen = useSelector((state: RootState) => state.specification.value.women)
     const category = categ === 'mens' ? specMen : (categ === 'womens' ? specWomen : '')
-    const filteredSpec = ObjectData.filter(item => item.specification.includes(category));
-    const filteredData = filteredSpec.filter((i) => i.category === categ).slice(0, limit);
+    const filteredSpec = spec === '' ? ObjectData.filter(item => item.specification.includes(category)) : ObjectData.filter(item => item.specification.includes(spec));
+    const filteredData = filteredSpec.filter((i) => i.category === categ).slice(startIndex, limit);
 
 
     return (

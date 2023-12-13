@@ -24,7 +24,7 @@ const ProductPage = ({ obj, error }: { obj: ObjectInterface, error: boolean }) =
             </Helmet>
             <Header />
             <NoSSR obj={obj} />
-            <RelatedProducts />
+            <RelatedProducts obj={obj} />
         </div>
     )
 

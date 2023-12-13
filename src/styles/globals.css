@@ -151,6 +151,8 @@ svg:hover {
   width: calc(100% - 16rem);
 }
 
+/* MEDIA QUERIES */
+
 @media (max-width: 320px) {
   * {
     font-size: 12px;
@@ -193,11 +195,3 @@ svg:hover {
     padding-right: 5%;
   }
 }
-/* @media (min-width: 1280px) {
-  .container {
-      max-width: 1280px;
-  }
-} */
-/* @media (min-width: 1536px) {
-
-} */
