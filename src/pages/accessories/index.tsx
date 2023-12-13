@@ -1,9 +1,16 @@
+import { Helmet } from "react-helmet-async"
 
 
 const index = () => {
     return (
-
-        <div>comming soon</div>
+        <>
+            <Helmet>
+                <title>
+                    Accessories
+                </title>
+            </Helmet>
+            <div>comming soon</div>
+        </>
     )
 }
 

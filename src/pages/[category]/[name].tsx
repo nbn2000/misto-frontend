@@ -4,6 +4,7 @@ import { ObjectData, ObjectInterface } from "@/data/object";
 import { useRouter } from "next/router"
 import Error from "next/error"
 import dynamic from 'next/dynamic'
+import { Helmet } from 'react-helmet-async';
 
 const NoSSR = dynamic(() => import('@/sections/productPage/Body'), { ssr: false })
 
@@ -12,10 +13,15 @@ const ProductPage = ({ obj, error }: { obj: ObjectInterface, error: boolean }) =
 
 
     if (error) {
-        return <Error statusCode={404} />;
+        return <><Helmet><title>404 Not Found</title></Helmet><Error statusCode={404} /></>;
     }
     return (
         <div>
+            <Helmet>
+                <title>
+                    Product page
+                </title>
+            </Helmet>
             <Header />
             <NoSSR obj={obj} />
             <RelatedProducts />
