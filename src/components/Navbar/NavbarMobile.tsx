@@ -8,6 +8,7 @@ import { MdCancel } from "react-icons/md";
 import { BsClock } from "react-icons/bs";
 import { IoTrashSharp } from "react-icons/io5";
 import ProfileHover from "./ProfileHover"
+import { SVG49 } from '@/svg/SVG'
 
 const NavbarMobile = ({
   toggleInput,
@@ -35,35 +36,70 @@ const NavbarMobile = ({
     <> {
       !isActive ? (
         <nav className="hidden lg:flex justify-between items-center container-p h-20">
-
-          <div className="drawer  w-4 z-40">
+          <div className="drawer w-8 z-50 ">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content">
+            <div className="drawer-content w-8">
               {/* Page content here */}
-              <label htmlFor="my-drawer" className=" drawer-button"><IoMenuSharp className="text-2xl text-dark" /></label>
+              <label htmlFor="my-drawer" className="drawer-button"><IoMenuSharp className="text-2xl text-dark" /></label>
             </div>
-            <div className="drawer-side">
+            <div className="drawer-side min-h-full w-full">
               <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-              <ul className="menu p-4 w-11/12 min-h-full bg-base-200 text-base-content">
+              <ul className="menu p-4 w-80 sm:w-full min-h-full bg-base-200 text-base-content ">
+                <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay absolute top-3 right-0"><SVG49 /></label>
                 {/* Sidebar content here */}
                 {
                   isLogged ? (
-                    <div className=" w-full">
+                    <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay w-full max-h-min">
                       <ProfileHover />
-                    </div>
+                    </label>
                   ) : (
-                    <li className="flex flex-row justify-between"><Link href="/login">Login</Link> <Link href="/signup">SignUp</Link></li>
+                    <li className="flex flex-row justify-between">
+                      <Link href="/login">Login</Link>
+                      <Link href="/signup">SignUp</Link>
+                    </li>
                   )
                 }
                 <hr className="w-full rounded-sm bg-slate-400 my-3" />
-                <li><Link href="/about-us" className="text-sm font-normal leading-normal text-dark">About Us</Link></li>
-                <li><Link href="/womens" className="text-sm font-normal leading-normal text-dark">Women</Link></li>
-                <li><Link href="/mens" className="text-sm font-normal leading-normal text-dark">Men</Link></li>
-                <li><Link href="/beauty" className="text-sm font-normal leading-normal text-dark">Beauty</Link></li>
-                <li><Link href="/accessories" className="text-sm font-normal leading-normal text-dark">Accessories</Link></li>
-                <li><Link href="/blog" className="text-sm font-normal leading-normal text-dark">Blog</Link></li>
-                <li><Link href="/contact" className="text-sm font-normal leading-normal text-dark">Contact</Link></li>
-                <li><Link href="/favourite" className="text-sm font-normal leading-normal text-dark">Favourites</Link></li>
+                <li>
+                  <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay w-full text-sm font-normal leading-normal text-dark">
+                    <Link href="/about-us">About Us</Link>
+                  </label>
+                </li>
+                <li>
+                  <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay w-full text-sm font-normal leading-normal text-dark">
+                    <Link href="/womens" >Women</Link>
+                  </label>
+                </li>
+                <li>
+                  <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay w-full text-sm font-normal leading-normal text-dark">
+                    <Link href="/mens" >Men</Link>
+                  </label>
+                </li>
+                <li>
+                  <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay w-full text-sm font-normal leading-normal text-dark">
+                    <Link href="/beauty" >Beauty</Link>
+                  </label>
+                </li>
+                <li>
+                  <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay w-full text-sm font-normal leading-normal text-dark">
+                    <Link href="/accessories" >Accessories</Link>
+                  </label>
+                </li>
+                <li>
+                  <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay w-full text-sm font-normal leading-normal text-dark">
+                    <Link href="/blog" >Blog</Link>
+                  </label>
+                </li>
+                <li>
+                  <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay w-full text-sm font-normal leading-normal text-dark">
+                    <Link href="/contact" >Contact</Link>
+                  </label>
+                </li>
+                <li>
+                  <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay w-full text-sm font-normal leading-normal text-dark">
+                    <Link href="/favourite" >Favourites</Link>
+                  </label>
+                </li>
 
                 <hr className="w-full rounded-sm bg-slate-400 my-4" />
                 <select className="select select-bordered select-sm w-full max-w-xs outline-none h-auto bg-transparent my-4">

@@ -54,7 +54,7 @@ const Cards = ({ categ, limit = ObjectData.length, grid = true, startIndex = 0, 
                     )
                 })}
             </div>) : (
-            <div className="flex flex-col justify-center items-center w-full gap-4">
+            <div className="flex flex-col justify-center items-center w-full gap-4 ">
                 {filteredData.map((i, index) => {
                     return (
                         <div key={`${categ}-${i.id}${index}`} className="w-full h-[150px] flex flex-row justify-between hover:shadow-box" onClick={() => router.push(`/${i.category}/${i.id}`)}>

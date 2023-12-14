@@ -1,11 +1,11 @@
 import Avatar from "@/assets/channels4_profile.png";
 import Image from "next/image";
 import Link from "next/link";
-const ProfileHover = () => {
-
+const ProfileHover = ({ show, setShow }: { show?: boolean, setShow?: any }) => {
+  const hidden = show ? '' : 'hidden'
   return (
     <div
-      className={`z-50 flex flex-col justify-center p-6 rounded-xl sm:px-12`}
+      className={`${hidden} z-50 flex flex-col justify-center p-6 rounded-xl sm:p-0`}
     >
       <Image
         src={Avatar}
@@ -21,14 +21,15 @@ const ProfileHover = () => {
             avatar123@gmail.com
           </p>
         </div>
-        <div className="flex justify-center align-center gap-2">
+        <div className="flex justify-center align-center gap-2 flex-wrap">
           <Link
             href="/user-profile"
             className="border-button text-dark bg-white py-2 px-8"
+            onClick={() => setShow(false)}
           >
             Profile
           </Link>
-          <button className="bg-dark text-white py-2 px-8">Log Out</button>
+          <button className="bg-dark text-white py-2 px-8" onClick={() => setShow(false)}>Log Out</button>
         </div>
       </div>
     </div>

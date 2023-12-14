@@ -248,7 +248,7 @@ const NavbarDesktop = ({
       </div>
       {show && (
         <div className="z-50 absolute right-10 top-[6rem] max-w-xs bg-white shadow-md">
-          <ProfileHover />
+          <ProfileHover show={show} setShow={setShow} />
         </div>
       )}
     </nav>

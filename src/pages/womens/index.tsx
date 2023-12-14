@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet-async"
 const Womens = () => {
 
     return (
-
         <div>
             <Helmet>
                 <title>Womens Page</title>
@@ -12,7 +11,6 @@ const Womens = () => {
             <Header />
             <Body />
         </div>
-
     )
 }
 

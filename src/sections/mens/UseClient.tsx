@@ -15,7 +15,7 @@ export const TopBody = ({ setGrid, grid }: { setGrid: any, grid: boolean }) => {
         dispatch(change({ men: e, women: spec.women, data: spec.data }))
     }
     return (
-        <div>
+        <div >
             <div className="flex justify-between items-center flex-wrap">
                 <button className="flex flex-row justify-center items-center gap-3" onClick={() => setActive(!active)}>
                     {active ?

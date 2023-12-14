@@ -8,7 +8,7 @@ const Body = () => {
     const [grid, setGrid] = useState(true)
 
     return (
-        <div className="cont-y container-p">
+        <div className="cont-y container-p ">
             <TopBody setGrid={setGrid} grid={grid} />
             <Cards categ="mens" limit={10} grid={grid} />
             <div className="w-full flex justify-center cont-y">
